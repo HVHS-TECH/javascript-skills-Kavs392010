@@ -1,7 +1,7 @@
 /****************************
-Name of task: Introduction to JavaScript
+Name of task: Functions
 ****************************/
-console.log("Running t05_JavaScript_and_HTML.js")
+console.log("Running t06_functions.js")
 //Variables
 var myName= "Kavya";
 var myAge= 15;

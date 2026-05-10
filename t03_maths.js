@@ -1,5 +1,5 @@
 /****************************
-Name of task: Introduction to JavaScript
+Name of task: Maths
 ****************************/
 console.log("Running t03_maths.js")
 //Variables

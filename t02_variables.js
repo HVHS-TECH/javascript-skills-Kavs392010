@@ -1,5 +1,5 @@
 /****************************
-Name of task: Introduction to JavaScript
+Name of task: Variables
 ****************************/
 console.log("Running t02_variables.js")
 //Variables

@@ -1,5 +1,5 @@
 /****************************
-Name of task: Introduction to JavaScript
+Name of task: Debugging
 ****************************/
 
 console.log("Running t04_debugging.js");

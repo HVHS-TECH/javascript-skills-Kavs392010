@@ -1,5 +1,5 @@
 /****************************
-Name of task: Introduction to JavaScript
+Name of task: Java scrpit and HTML
 ****************************/
 console.log("Running t05_JavaScript_and_HTML.js")
 //Variables
