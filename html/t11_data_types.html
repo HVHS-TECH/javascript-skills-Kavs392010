@@ -19,13 +19,30 @@
   <h1>T11-data types</h1>
   <p>Open the console <code>(Ctrl-shift-i)</code> to see the messages.</p>
 
-  <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
+ <button onclick="start()">Start</button>
 
   <div id="spaceForJavaScriptOutput">
 
     The output of your script will go here.
 
   </div>
+
+<label for="nameField">Name:</label>
+<input type="text" id="nameField" name="formName" placeHolder="Name">
+
+<label for="productField">Product:</label>
+<input type="text" id="productField" name="formProduct" placeHolder="Product">
+
+<label for="AgeField">Age:</label>
+<input type="text" id="AgeField" name="formAge" placeHolder="Age">
+
+<label for="ProductPriceField">Product Price:</label>
+<input type="number" id="ProductPriceField" name="formProductPrice" placeHolder="Product Price" step="1">
+
+<label for="MoneyField">Money:</label>
+<input type="number" id="MoneyField" name="formMoney" placeHolder="Money" step="1">
+
+<input type="button" onClick="getFormInput()" value="Submit">
 
 
   <script src="../t11_data_types.js"></script>
