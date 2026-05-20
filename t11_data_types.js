@@ -30,11 +30,6 @@ function start(){
     console.log("I spend half of it, now I have " + userMoney/2 + " dollars left in my account. ");
     console.log("Then I get $3, now I have " + ((userMoney/2)+3) + " dollars in my account. ");
 
-    
-    OUTPUT.innerHTML= "<h2>Added by JavaScript</h2>";
-    OUTPUT.innerHTML += "<h2>Hello " + myName + "!</h2>";
-    OUTPUT.innerHTML += "<h2>Second Paragraph line</h2>";
-    OUTPUT.innerHTML += "<h2>Third Paragraph Line</h2>";
     welcome();
     displayProduct("Chocolate", 4);
     displayProduct("Chips", 3);
