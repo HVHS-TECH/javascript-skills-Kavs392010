@@ -53,11 +53,12 @@ function displayProduct(_name, _price){
 }
 
 function getFormInput(_name,_product,_age,_price,_money){
+    OUTPUT.innerHTML = "<p>Welcome to My shop</p>";  
     let userName = (NAME_FIELD.value);
-    OUTPUT.innerHTML = "<p> Your name is " + userName + "</p>";
+    OUTPUT.innerHTML += "<p> Your name is " + userName + "</p>";
     let userProduct = (PRODUCT_FIELD.value);
     OUTPUT.innerHTML += "<p> Your product is " + userProduct + "</p>";
-    let userAge = (AGE_FIELD.value);
+    let userAge = Number(AGE_FIELD.value);
     OUTPUT.innerHTML += "<p> Your age is " + userAge + "</p>";
     let userProductprice = Number(PRODUCT_PRICE_FIELD.value);
     OUTPUT.innerHTML += "<p> Your product price is $" + userProductprice + "</p>";
@@ -78,19 +79,30 @@ else{
 }
 
 function calculateChange(_productPrice, _pocketMoney){
+    OUTPUT.innerHTML = "<p>Welcome to My shop</p>";  
+    let userName = (NAME_FIELD.value);
+    OUTPUT.innerHTML += "<p> Your name is " + userName + "</p>";
+    let userProduct = (PRODUCT_FIELD.value);
+    OUTPUT.innerHTML += "<p> Your product is " + userProduct + "</p>";
+    let userAge = Number(AGE_FIELD.value);
+    OUTPUT.innerHTML += "<p> Your age is " + userAge + "</p>";
     let userProductprice = Number(PRODUCT_PRICE_FIELD.value);
-    OUTPUT.innerHTML = "<p> Your product price is $" + userProductprice + "</p>";
+    OUTPUT.innerHTML += "<p> Your product price is $" + userProductprice + "</p>";
     let pocketMoney= Number(MONEY_FIELD.value);
-    OUTPUT.innerHTML += "<p> Your pocket money is $" + pocketMoney + "</p>>";
+    OUTPUT.innerHTML += "<p> Your pocket money is $" + pocketMoney + ".</p>";
     let change= Number(pocketMoney - userProductprice);
-    OUTPUT.innerHTML += "<p> Your change is $" + change + "</p>";
+    OUTPUT.innerHTML += "<p> Your change is $" + change + ".</p>";
+
     if (change < 0){
         console.log("You have a loss of $" + change + " because you cannot afford the product.");
+        OUTPUT.innerHTML += "<p> You have a loss of $" + change + " because you cannot afford the product.</p>";
     }
     else if (change == 0){
         console.log("You have no change left.");
+        OUTPUT.innerHTML += "<p> You have no change left.</p>";
     }
     else{
         console.log("You have a change of $" + change + " because you can afford the product.");
+        OUTPUT.innerHTML += "<p> You have a change of $" + change + " because you can afford the product.</p>"; 
     } 
 }
