@@ -18,14 +18,45 @@
 <body>
   <h1>T14-arrays part 1</h1>
   <p>Open the console <code>(Ctrl-shift-i)</code> to see the messages.</p>
-
-  <p><br><br><i>Copy your HTML from the last task and keep building.</i><br><br><br><br></p>
+  
+   <button onclick="start()">Start</button>
 
   <div id="spaceForJavaScriptOutput">
 
-    The output of your script will go here.
+The output of your scrpit goes here.
 
   </div>
+
+
+<br><label for="nameField">Name:</label></br>
+<input type="text" id="nameField" name="formName" placeHolder="Name">
+
+<br><label for="productField">Product:</label></br>
+<input type="text" id="productField" name="formProduct" placeHolder="Product">
+
+<br><label for="AgeField">Age:</label></br>
+<input type="number" id="AgeField" name="formAge" placeHolder="Age">
+
+<br><label for="ProductPriceField">Product Price:</label></br>
+<input type="number" id="ProductPriceField" name="formProductPrice" placeHolder="Product Price" step="0.01">
+
+<br><label for="MoneyField">Money:</label></br>
+<input type="number" id="MoneyField" name="formMoney" placeHolder="Money" step="0.01">
+
+<br><label for="FeedbackField">What do you think about MacBooks</label></br>
+<select id="FeedbackField" name="formFeedback">
+  <option value="">Choose</option>
+  <option value="0">I hate MacBooks</option>
+  <option value="1">I don't like MacBooks</option>
+  <option value="2">MacBooks are fine</option>
+  <option value="3">Macbooks are pretty cool</option>
+  <option value="4">Macbooks are the best thing EVER!!!</option>
+</select>
+
+<br><label for="ChooseField">Choose a statement about chocolate:</label></br>
+<input type="number" id="ChooseField" name="formChoose" placeHolder="0-3" step="1">
+
+<br><input type="button" onClick="getFormInput(), calculateChange()" value="Submit"></br>
 
 
   <script src="../t14_arrays_1.js"></script>
