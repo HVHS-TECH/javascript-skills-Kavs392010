@@ -75,7 +75,7 @@ else if (userProductprice == pocketMoney){
 }
 else{
     console.log("You can buy " + userProduct + " and you will have $" + (pocketMoney - userProductprice) + " left.");
-}   
+}     
 
 }
 
