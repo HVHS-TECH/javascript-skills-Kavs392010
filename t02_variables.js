@@ -6,7 +6,7 @@ console.log("Running t02_variables.js")
 var myName= "Kavya";
 var myAge= 15;
 var userMoney= 1000;
-var newDate= new Date(2026, 4, 28);
+var newDate= new Date();
 /****************************
 Main
 ****************************/

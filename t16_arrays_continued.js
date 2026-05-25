@@ -1,13 +1,14 @@
 /****************************
-Name of task: For Loop
+Name of task: Arrays Continued
+Author: Kavya
 ****************************/
-console.log("Running t15_for_loop.js")
+console.log("Running t16_arrays_continued.js")
 //Variables
 var myName= "Kavya";
 var myAge= 15;
 var myAgeinNextfourMonths= 16;
 var userMoney= 1000;
-var newDate= new Date(2026, 4, 28);
+var newDate= new Date();
 var currentYear= newDate.getFullYear();
 var birthYear= currentYear - myAgeinNextfourMonths;
 var futureAge= myAgeinNextfourMonths + 10;
@@ -40,6 +41,7 @@ function start(){
     displayProduct("Chips", 3);
     displayProduct("Drink", 2.50);
     displayProduct("MacBook", 1500);
+    getFormInput();
 }
   
 /****************************
@@ -54,7 +56,7 @@ function displayProduct(_name, _price){
 }
 
 function getFormInput(_name,_product,_age,_price,_money){
-    OUTPUT.innerHTML += "<p>Welcome to My shop</p>";  
+    OUTPUT.innerHTML = "<p>Welcome to My shop</p>";  
     let userName = (NAME_FIELD.value);
     OUTPUT.innerHTML += "<p> Your name is " + userName + "</p>";
     let userProduct = (PRODUCT_FIELD.value);
@@ -75,7 +77,7 @@ else if (userProductprice == pocketMoney){
 }
 else{
     console.log("You can buy " + userProduct + " and you will have $" + (pocketMoney - userProductprice) + " left.");
-}     
+}   
 
 }
 
