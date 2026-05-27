@@ -27,6 +27,7 @@ const PRODUCT_PRICE_FIELD = document.getElementById("ProductPriceField");
 const MONEY_FIELD = document.getElementById("MoneyField");
 const FEEDBACK_FIELD = document.getElementById("FeedbackField");
 const CHOOSE_FIELD = document.getElementById("ChooseField");
+const NEW_ITEM_FIELD = document.getElementById("NewItemField");
 
 function start(){
     console.log("Hi " + myName + ". As of " + newDate + " I am " + myAge + " years old.");
@@ -108,10 +109,19 @@ function calculateChange(_productPrice, _pocketMoney){
         console.log("You have a change of $" + change + " because you can afford the product.");
         OUTPUT.innerHTML += "<p> You have a change of $" + change + " because you can afford the product.</p>"; 
     } 
+    
     let classArray = ["You loath chocolate", "Chocolate is meh", "Chocolate is pretty good", "Chocolate is the best thing EVER!!!"];
     let choice = (CHOOSE_FIELD.value);
     OUTPUT.innerHTML += "You choose : " + classArray[choice] + "<br>";
     let classArray1 = ["I hate MacBooks", "I don't like MacBooks", "MacBooks are fine", "MacBooks are pretty cool", "MacBooks are the best thing EVER!!!"];
     let userFeedback = (FEEDBACK_FIELD.value);
     OUTPUT.innerHTML += "You choose : " + classArray1[userFeedback] + "<br>";
+
+    let itemArray = ["Chocolate", "Chips", "Drink", "MacBook"];
+    let newItem = (NEW_ITEM_FIELD.value);
+    itemArray.push(newItem);
+    for (let i=0; i<itemArray.length; i++){
+        OUTPUT.innerHTML += "Item" + i + ":" +itemArray[i] + "<br>";
+    }
+    OUTPUT.innerHTML += "There are " + itemArray.length + " items in the shopping list.<br>";
 }

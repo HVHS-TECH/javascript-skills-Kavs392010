@@ -40,6 +40,9 @@ function start(){
     displayProduct("Chips", 3);
     displayProduct("Drink", 2.50);
     displayProduct("MacBook", 1500);
+
+    console.log("loop stopped");
+    
 }
   
 /****************************
