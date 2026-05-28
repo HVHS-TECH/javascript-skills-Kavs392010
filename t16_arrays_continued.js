@@ -15,6 +15,7 @@ var futureAge= myAgeinNextfourMonths + 10;
 var userProductprice;
 var pocketMoney;
 var change;
+var itemArray1 = [];
 /****************************
 Main
 ****************************/
@@ -95,7 +96,6 @@ function calculateChange(_productPrice, _pocketMoney){
     let pocketMoney= Number(MONEY_FIELD.value);
     OUTPUT.innerHTML += "<p> Your pocket money is $" + pocketMoney + ".</p>";
     let change= Number(pocketMoney - userProductprice);
-    OUTPUT.innerHTML += "<p> Your change is $" + change + ".</p>";
 
     if (change < 0){
         console.log("You have a loss of $" + change + " because you cannot afford the product.");
@@ -117,11 +117,18 @@ function calculateChange(_productPrice, _pocketMoney){
     let userFeedback = (FEEDBACK_FIELD.value);
     OUTPUT.innerHTML += "You choose : " + classArray1[userFeedback] + "<br>";
 
-    let itemArray = ["Chocolate", "Chips", "Drink", "MacBook"];
+    let itemArray = [itemArray1];
     let newItem = (NEW_ITEM_FIELD.value);
     itemArray.push(newItem);
     for (let i=0; i<itemArray.length; i++){
-        OUTPUT.innerHTML += "Item" + i + ":" +itemArray[i] + "<br>";
+        OUTPUT.innerHTML += "Item" + i+ ":" +itemArray[i] + "<br>";
     }
-    OUTPUT.innerHTML += "There are " + itemArray.length + " items in the shopping list.<br>";
+    OUTPUT.innerHTML += "There are " + itemArray.length + " items in the shopping list. <br>";
+
+    if (itemArray.length + 1 > 0){
+        OUTPUT.innerHTML += "You have added an item <br>";
+    }
+    else {
+        OUTPUT.innerHTML += "Add an item to the shopping list. <br>";
+    }
 }
