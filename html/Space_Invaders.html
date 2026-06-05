@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Space Invaders Game</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- stylesheets *******************************************-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../assets/dtec_favicon.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .game-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .instructions {
+      max-width: 1100px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+    .instructions h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .instructions h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    .instructions p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .instructions ul {
+      margin: 10px 0;
+      padding-left: 25px;
+    }
+
+    .instructions li {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .controls-section {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .restart-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .restart-btn:hover {
+      background: #c0392b;
+    }
+
+    #gameCanvas {
+      border: 5px solid #333;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      background: #0a0a1a;
+    }
+  </style>
+</head>
+
+<!--*************************************************************
+  BODY
+**************************************************************-->
+
+<body>
+  <div class="game-container">
+    <div class="controls-section">
+      <button class="restart-btn" onclick="restartGame()">🔄 Restart Game</button>
+    </div>
+
+    <!-- Canvas will be created by game.js -->
+  </div>
+
+  <div class="instructions">
+    <h2>🚀 SPACE INVADERS 🚀</h2>
+    
+    <h3>About This Game:</h3>
+    <p>Defend Earth from waves of alien invaders! Shoot down enemies before they reach the bottom of the screen. Progress through 5 levels of increasing difficulty with new enemy formations and more aggressive aliens!</p>
+
+    <h3>How to Play:</h3>
+    <ul>
+      <li><strong>Arrow Keys</strong> or <strong>A/D</strong> - Move your spaceship left and right</li>
+      <li><strong>Spacebar</strong> - Shoot bullets at enemies</li>
+      <li>Destroy all enemies to complete each level</li>
+      <li>Don't let enemies reach the bottom or you lose!</li>
+      <li>You start with 3 lives - avoid enemy fire!</li>
+      <li><strong>Press R</strong> - Restart game anytime</li>
+    </ul>
+
+    <h3>Enemy Types:</h3>
+    <ul>
+      <li>🔴 <strong>Red Enemies:</strong> Basic aliens, worth 100 points each</li>
+      <li>🟠 <strong>Boss Enemies:</strong> Appear in Level 3+, worth 500 points each, stronger</li>
+    </ul>
+
+    <h3>Game Features:</h3>
+    <ul>
+      <li><strong>5 Levels:</strong> Each level has more enemies and they move faster</li>
+      <li><strong>Lives System:</strong> Start with 3 lives, lose one when hit by enemy fire</li>
+      <li><strong>Score Tracking:</strong> Earn points by destroying enemies</li>
+      <li><strong>Enemy AI:</strong> Enemies randomly shoot back at you</li>
+      <li><strong>Boss Battles:</strong> Special powerful enemies appear at higher levels</li>
+    </ul>
+
+    <h3>Tips:</h3>
+    <ul>
+      <li>Keep moving to avoid enemy bullets</li>
+      <li>Try to destroy enemies quickly before they descend</li>
+      <li>Boss enemies are worth more points but harder to defeat</li>
+      <li>You can shoot continuously - spam spacebar!</li>
+    </ul>
+  </div>
+
+  <script src="../Space Invaders/game.js"></script>
+
+</body>
+
+</html>
+<!--*************************************************************
+  END OF SPACE_INVADERS.HTML
+**************************************************************-->

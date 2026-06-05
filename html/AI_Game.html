@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>AI Game - Angry Birds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- stylesheets *******************************************-->
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" type="image/png" href="../assets/dtec_favicon.png">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+    }
+
+    .game-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .instructions {
+      max-width: 1100px;
+      margin: 20px auto;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      line-height: 1.6;
+    }
+
+    .instructions h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .instructions h3 {
+      margin-top: 15px;
+      font-size: 18px;
+      text-decoration: underline;
+    }
+
+    .instructions p {
+      margin: 8px 0;
+      font-size: 14px;
+    }
+
+    .instructions ul {
+      margin: 10px 0;
+      padding-left: 25px;
+    }
+
+    .instructions li {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    .controls-section {
+      background: #f0f0f0;
+      padding: 15px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .restart-btn {
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .restart-btn:hover {
+      background: #c0392b;
+    }
+
+    #gameCanvas {
+      border: 5px solid #333;
+      border-radius: 10px;
+      display: block;
+      margin: 0 auto;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+
+<!--*************************************************************
+  BODY
+**************************************************************-->
+
+<body>
+  <div class="game-container">
+    <div class="controls-section">
+      <button class="restart-btn" onclick="restartGame()">🔄 Restart Game</button>
+    </div>
+
+    <!-- Canvas will be created by game.js -->
+  </div>
+
+  <div class="instructions">
+      <h2>🎮 ANGRY BIRDS GAME 🎮</h2>
+      
+      <h3>About This Game:</h3>
+      <p>Launch colorful birds at enemy pigs and wooden structures to destroy them all! Progress through 4 challenging levels with increasing difficulty. Each level is harder than the last with more enemies and structures. Your score carries over across all levels!</p>
+
+      <h3>How to Play:</h3>
+      <ul>
+        <li><strong>Click and drag</strong> on the launcher (left side) to aim the bird</li>
+        <li><strong>Release</strong> to launch the bird at enemies</li>
+        <li>Different birds have different <strong>speeds, damages, and abilities</strong></li>
+        <li>Destroy all <strong>green pigs</strong> and <strong>wooden structures</strong> to complete each level</li>
+        <li>You get a certain number of birds per level</li>
+        <li><strong>Press SPACE</strong> to advance to the next level after completing one</li>
+      </ul>
+
+      <h3>Levels:</h3>
+      <ul>
+        <li><strong>Level 1:</strong> 2 enemies, 3 structures, 5 birds available</li>
+        <li><strong>Level 2:</strong> 3 enemies, 4 structures, 6 birds available</li>
+        <li><strong>Level 3:</strong> 4 enemies, 5 structures, 7 birds available</li>
+        <li><strong>Level 4:</strong> 5 enemies, 4 structures, 8 birds available</li>
+      </ul>
+
+      <h3>Birds:</h3>
+      <ul>
+        <li>🔴 <strong>Red</strong> - Balanced damage and speed</li>
+        <li>🟡 <strong>Chuck</strong> - Fast but less powerful</li>
+        <li>⚫ <strong>Bomb</strong> - Extremely powerful, slowest</li>
+        <li>🔴 <strong>Terence</strong> - Most powerful, very slow</li>
+        <li>🟠 <strong>Stella</strong> - Good damage and speed</li>
+      </ul>
+
+      <h3>Scoring:</h3>
+      <ul>
+        <li>Destroy an enemy pig: <strong>+100 points</strong></li>
+        <li>Destroy a structure: <strong>+50 points</strong></li>
+        <li><strong>Your score persists across all levels!</strong></li>
+        <li><strong>Hits Counter:</strong> Tracks how many enemies and structures you've destroyed</li>
+      </ul>
+    </div>
+
+  <script src="../AI Game/game.js"></script>
+
+</body>
+
+</html>
+<!--*************************************************************
+  END OF AI_GAME.HTML
+**************************************************************-->
